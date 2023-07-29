@@ -69,11 +69,10 @@
         }).open();
     }
 </script>
-    <title>결혼 답례품</title>
 </head>
 <body>
     <section class="get-in-touch">
-    <h1 class="title">결혼식 답례품</h1>
+    <h1 class="title">결혼식 답례품<p style="font-size:12px;">(변다윗 & 송이슬 결혼식)</p></h1>
     <form class="contact-form row" method="post" action="" name="contact-form">
         <div class="form-field col-lg-6">
             <input id="name" class="input-text js-input" type="text" name="name" required>
@@ -95,12 +94,13 @@
         </div>
     
         <div class="form-field col-lg-12">
-            <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" class="search-btn"><br>
+            <p style="color: #A67f78; font-weight:bold">배송 받으실 주소</p>
             <div class="address-field" style="margin-top: 30px;">
+                <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" class="search-btn" style="width: 100%;">
                 <input type="text" id="sample6_postcode" class="input-text js-input" placeholder="우편번호" name="postcode" required>
                 <input type="text" id="sample6_address" class="input-text js-input" placeholder="주소" name="address" required>
-                <input type="text" id="sample6_extraAddress" class="input-text js-input" placeholder="참고항목" name="extraAddress">
                 <input type="text" id="sample6_detailAddress" class="input-text js-input" placeholder="상세주소" name="detailAddress" required>
+                <input type="text" id="sample6_extraAddress" class="input-text js-input" placeholder="별도항목" name="extraAddress" style="display: none;">
             </div>
         </div>
         <div class="form-field col-lg-12">
@@ -108,6 +108,7 @@
         </div>
     </form>
     </section>
+     
     <script src="script.js"></script>
 </body>
 </html>

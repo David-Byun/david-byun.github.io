@@ -2,6 +2,7 @@ const scriptURL =
   'https://script.google.com/macros/s/AKfycbwtprK-NnI2FB0SARXa6V65Nw9SXYYNpK-EWPPPQF_FTfbf_DV6fWp-mg428gU79Mu3hg/exec';
 
 const form = document.forms['contact-form'];
+let isSubmitting = false;
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
