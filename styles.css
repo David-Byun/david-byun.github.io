@@ -1,0 +1,172 @@
+/* Common styles for both desktop and mobile */
+.get-in-touch {
+  max-width: 800px;
+  margin: 50px auto;
+  position: relative;
+  padding : 10%;
+}
+
+.get-in-touch .title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 3.2em;
+  line-height: 48px;
+  padding-bottom: 48px;
+  color: #5543ca;
+  background: #5543ca;
+  background: -moz-linear-gradient(left, #f4524d 0%, #5543ca 100%) !important;
+  background: -webkit-linear-gradient(left, #f4524d 0%, #5543ca 100%) !important;
+  background: linear-gradient(to right, #f4524d 0%, #5543ca 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.contact-form .form-field {
+  position: relative;
+  margin: 32px 0;
+}
+
+
+.contact-form .input-text {
+  display: block;
+  width: 100%;
+  height: 36px;
+  border-width: 0 0 2px 0;
+  border-color: #5543ca;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.contact-form .input-text:focus {
+  outline: none;
+}
+
+.contact-form .input-text:focus + .label,
+.contact-form .input-text.not-empty + .label {
+  transform: translateY(-12px);
+}
+
+.contact-form .label {
+  position: absolute;
+  left: 18px;
+  bottom: 24px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #5543ca;
+  cursor: text;
+  transition: transform 0.2s ease-in-out, bottom 0.2s ease-in-out; /* Add a transition for smooth movement */
+}
+
+
+.contact-form .submit-btn {
+  display: inline-block;
+  background-color: #000;
+  background-image: linear-gradient(125deg, #a72879, #064497);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  padding: 8px 16px;
+  border: none;
+  width: 200px;
+  cursor: pointer;
+}
+
+/* Styles for Address Field */
+.address-field {
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  gap: 8px;
+}
+
+.address-field #sample6_postcode {
+  /* Adjust the width as needed */
+  width: 100%;
+}
+
+.address-field #sample6_address {
+  /* Adjust the width as needed */
+  width: 100%;
+}
+.address-field #sample6_extraAddress {
+  /* Adjust the width as needed */
+  width: 100%;
+}
+
+.address-field #sample6_detailAddress {
+  /* Adjust the width as needed */
+  width: 100%;
+}
+
+.address-field .search-btn {
+  width: 50px; /* Adjust the width as needed */
+}
+
+.dropdown-select {
+  display: block;
+  width: 100%;
+  height: 36px;
+  border-width: 0 0 2px 0;
+  border-color: #5543ca;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  outline: none;
+  color: #5543ca;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+/* Change the color of the selected option text to black */
+.dropdown-select:focus option:checked {
+  color: #000; /* Set the selected option text color to black */
+}
+
+
+/* Search Button Styles */
+.search-btn {
+  background-color: #000;
+  background-image: linear-gradient(125deg, #a72879, #064497);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Set the placeholder color of type="text" elements inside .address-field to the label color */
+.contact-form .address-field input[type="text"]::placeholder {
+  color: #5543ca;
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+  .get-in-touch .title {
+    font-size: 2.2em;
+    line-height: 36px;
+    padding-bottom: 36px;
+  }
+
+  .contact-form .input-text,
+  .contact-form .label,
+  .contact-form .submit-btn,
+  .dropdown-select,
+  .address-field input[type="text"],
+  .address-field .search-btn {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .address-field input[type="text"] {
+    width: 100%;
+  }
+
+  .address-field .search-btn {
+    width: 100%;
+  }
+}
