@@ -7,8 +7,27 @@
 }
 
 .swal2-popup {
-    width: 60%; /* 원하는 크기로 조절하세요 */
-  }
+  width: 60%; /* 원하는 크기로 조절하세요 */
+}
+
+/* 아이콘에 대한 스타일 */
+.swal2-icon {
+  font-size: 10px; /* 원하는 아이콘 크기로 조절 */
+}
+
+  /* 글씨에 대한 스타일 */
+.swal2-title {
+  font-size: 13px; /* 원하는 글씨 크기로 조절 */
+}
+
+#swal2-html-container {
+  font-size: 10px; /* 원하는 글씨 크기로 조절 */
+}
+
+.swal2-confirm {
+  width:80px;
+  height:40px;
+}
 
 .get-in-touch .title {
   text-align: center;

@@ -14,12 +14,25 @@ form.addEventListener('submit', (e) => {
   isSubmitting = true; // Set the flag to true to indicate that form submission is in progress
   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
     .then((response) =>
-      Swal.fire('감사합니다!', '기다려주시면 보내드리겠습니다.', 'success')
+      Swal.fire({
+        title: '감사합니다!',
+        text: '기다려주시면 보내드리겠습니다.',
+        icon: 'success',
+        onClose: () => {
+          window.close();
+        },
+      })
     )
     .then(() => {
-      window.location.reload();
+      window.close();
     })
-    .catch((error) => console.error('Error!', error.message))
+    .catch((error) =>
+      Swal.fire({
+        title: '죄송합니다!',
+        text: '다시 작성해주세요',
+        icon: 'fail'
+      })
+    )
     .finally(() => {
       isSubmitting = false; // Reset the flag to false after form submission is completed
     });
